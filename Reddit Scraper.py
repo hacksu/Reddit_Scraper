@@ -1,10 +1,5 @@
 import requests
 
-
-
-
-
-
 def scan(word,sub):
     url = "https://reddit.com/r/"+sub+"/new/.json"
     response = requests.get(url,headers = {'User-agent':'Scanner'})
@@ -22,11 +17,6 @@ def scan(word,sub):
             print()
             return
     print("Couldn't find",word)
-
-
-
-
-
-
+    
 while(True):
     scan(input("Enter a word or phrase: "),input("Enter a subreddit to scan: "))
